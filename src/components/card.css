@@ -1,0 +1,17 @@
+.card{
+    color: rgb(250, 249, 249);
+    background-color: rgb(43, 0, 44);
+    border: 10px solid black;
+}
+.cardB{
+color: rgb(252, 252, 252);
+    padding-left: 25px;
+padding-right: 25px;
+  margin-left: 80px;
+}
+
+.cardi{
+    width: 277px;
+    height: 250px;
+    margin-left: -4px;
+}
