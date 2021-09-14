@@ -4,15 +4,18 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'
 import './card.css';
 import Col from "react-bootstrap/Col";
+import BeastModel from "./BeastModel";
 
 class HornedBeast extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            numOfClick: 0
+            numOfClick: 0 ,
+            showModel: false
         }
     }
+    
 
     increaseNumberOfclicks = () => {
 
@@ -21,6 +24,13 @@ class HornedBeast extends React.Component {
         })
 
     }
+
+   
+ showMoldelfun=() => {
+this.props.beastButton(this.props.title)
+    
+}
+
     render() {
         return (
             <div>
@@ -33,10 +43,11 @@ class HornedBeast extends React.Component {
                             number of clicks {this.state.numOfClick}
                         </Card.Text>
                         <Button  className='cardB' onClick={this.increaseNumberOfclicks} variant="primary">Vote </Button>
+                        <Button   onClick={this.showMoldelfun} variant="primary">show </Button>
                     </Card.Body>
                 </Card>
                 </Col>
-
+               
             </div>
         )
     }

@@ -8,11 +8,12 @@ class Main extends React.Component {
         return (
             <div>
                 <Row xs={1} md={3} className="g-4">
-                    {dataArray.map((element, index) => {
+                    {this.props.dataArray.map((element, index) => {
                         return (
+
                             <HornedBeast key={index} title={element.title} img={element.image_url}
                                 description={element.description}
-                                keyWord={element.keyWord} horns={element.horns} />
+                                keyWord={element.keyWord} horns={element.horns} beastButton={this.props.beastButton}/>
                         )
 
                     })}
