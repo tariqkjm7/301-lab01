@@ -29,7 +29,10 @@ class HornedBeast extends React.Component {
  showMoldelfun=() => {
 this.props.beastButton(this.props.title)
     
-}
+};
+// arr = arr.filter(ele => typeof ele ==='number' )
+
+
 
     render() {
         return (
@@ -41,6 +44,9 @@ this.props.beastButton(this.props.title)
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>
                             number of clicks {this.state.numOfClick}
+                            </Card.Text>
+                            <Card.Text>  
+                                 horns number {this.props.horns}
                         </Card.Text>
                         <Button  className='cardB' onClick={this.increaseNumberOfclicks} variant="primary">Vote </Button>
                         <Button   onClick={this.showMoldelfun} variant="primary">show </Button>
